@@ -27,7 +27,10 @@ Users should be able to:
 
 ### Screenshot
 
+#### Mobile
 ![](screenshot/mobile.png)
+
+#### Desktop
 ![](screenshot/desktop.png)
 
 
