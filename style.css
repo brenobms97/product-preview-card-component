@@ -1,0 +1,136 @@
+:root {
+    --dark-cyan-p: hsl(158, 36%, 37%);
+    --cream-p: hsl(30, 38%, 92%);
+
+    --very-dark-blue-n: hsl(212, 21%, 14%);
+    --dark-grayish-blue-n: hsl(228, 12%, 48%);
+    --white-n: hsl(0, 0%, 100%);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  /*Styling*/
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--dark-grayish-blue-n);
+    background-color: var(--cream-p);
+    margin: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    background-color: var(--white-n);
+    border-radius: 0.6rem;
+    overflow: hidden;
+    max-width: 343px;
+  }
+
+  @media (min-width: 600px) {
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 600px;
+    }
+  }
+
+  .card-content {
+    padding: 1.5rem;
+    display: grid;
+    grid-gap: 1rem;
+  }
+
+  .type {
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-family: 'Fraunces', serif;
+    color: var(--very-dark-blue-n);
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .actual-price {
+    font-size: 2rem;
+    color: var(--dark-cyan-p);
+    font-family: 'Fraunces', serif;
+  }
+
+  .old-price {
+    text-decoration: line-through;
+  }
+
+  .btn {
+    border-radius: 0.5rem;
+    background-color: var(--dark-cyan-p);
+    padding: 1rem;
+    border: 0;
+    color: var(--white-n);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
